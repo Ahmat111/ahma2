@@ -60,7 +60,7 @@
    const cats = [
     {
         "name": "пушок",
-        "img_link": "https://www.friendforpet.ru/api/sites/default/files/2021-09/167200DD-A44F-4845-8D4D-ACCFC180165A.jpeg",
+        "img_link": "https://avatars.mds.yandex.net/i?id=f64710d1da958f2fc884be6cb109e1faa58442e8ddd00328-5268818-images-thumbs&n=13",
         "age": 8,
         "rate": 7,
         "favourite": false,
@@ -69,7 +69,7 @@
     },
     {
         "name": "Абрикос",
-        "img_link": "https://www.friendforpet.ru/api/sites/default/files/2022-01/064AEBCB-45EC-4CE7-AB13-C65F10F00B7B.jpeg",
+        "img_link": "https://avatars.mds.yandex.net/i?id=4d67f2dc7b03b9712146d3a0580daa4fe7c6f237-4463669-images-thumbs&n=13",
         "age": 2,
         "rate": 10,
         "favourite": false,
@@ -78,7 +78,7 @@
     },
     {
         "name": "Баритон",
-        "img_link": "https://www.friendforpet.ru/api/sites/default/files/2022-01/_DM34706.JPG",
+        "img_link": "https://avatars.mds.yandex.net/i?id=2b344dbebc2d214172cf4624bba90bdac1b9178c-5413570-images-thumbs&n=13",
         "age": 1,
         "rate": 10,
         "favourite": true,
@@ -87,7 +87,7 @@
     },
     {
         "name": "Вагнер",
-        "img_link": "https://www.friendforpet.ru/api/sites/default/files/2022-01/1_25.jpg",
+        "img_link": "https://avatars.mds.yandex.net/i?id=247781ada7f9f1bb7b4c55af513710ea442045b1-10576628-images-thumbs&n=13",
         "age": 4,
         "rate": 8,
         "favourite": false,
@@ -105,7 +105,7 @@
     },
     {
         "name": "Добби",
-        "img_link": "https://www.friendforpet.ru/api/sites/default/files/2022-01/4_30.jpg",
+        "img_link": "https://avatars.mds.yandex.net/i?id=fc68a37a506f14524e5f95f3ed0fa6ba0a42b5ae-4451037-images-thumbs&n=13",
         "age": 6,
         "rate": 9,
         "favourite": false,
