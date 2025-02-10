@@ -3,61 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Информация о котиках</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="cats-container" class="cats-container"></div>
-    <script src="script.js"></script>
 </body>
-</html>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
-
-.cats-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.cat-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    padding: 20px;
-}
-
-.cat-card img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.cat-card h2 {
-    margin: 15px 0 10px;
-    font-size: 1.5em;
-}
-
-.cat-card p {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #555;
-}
-
-.cat-card .favourite {
-    color: gold;
-    font-size: 1.2em;
-}
-</style>
 <script>
-   const cats = [
+    
+    const cats = [
     {
         "name": "пушок",
         "img_link": "https://avatars.mds.yandex.net/i?id=f64710d1da958f2fc884be6cb109e1faa58442e8ddd00328-5268818-images-thumbs&n=13",
@@ -141,45 +92,71 @@
     }
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-    const catsContainer = document.getElementById('cats-container');
+const heading = document.createElement('h1');
+heading.textContent = 'Наши котики';
+heading.style.textAlign = 'center'; 
+document.body.appendChild(heading);
 
-    cats.forEach(cat => {
-        const catCard = document.createElement('div');
-        catCard.className = 'cat-card';
+const container = document.createElement('div');
+container.style.display = 'flex';
+container.style.flexWrap = 'wrap';
+container.style.justifyContent = 'center';
+container.style.gap = '20px';
+container.style.padding = '20px';
+document.body.appendChild(container);
 
-        const catImage = document.createElement('img');
-        catImage.src = cat.img_link;
-        catImage.alt = cat.name;
+cats.forEach(cat => {
 
-        const catName = document.createElement('h2');
-        catName.textContent = cat.name;
+    const card = document.createElement('div');
+    card.style.width = '250px';
+    card.style.border = '1px solid #ddd';
+    card.style.borderRadius = '8px';
+    card.style.overflow = 'hidden';
+    card.style.backgroundColor = '#fff';
+    card.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
 
-        const catAge = document.createElement('p');
-        catAge.textContent = `Возраст: ${cat.age} лет`;
 
-        const catRate = document.createElement('p');
-        catRate.textContent = `Рейтинг: ${cat.rate}/10`;
+    const img = document.createElement('img');
+    img.src = cat.img_link;
+    img.alt = cat.name;
+    img.style.width = '100%';
+    img.style.height = '200px';
+    img.style.objectFit = 'cover';
+    card.appendChild(img);
 
-        const catDescription = document.createElement('p');
-        catDescription.textContent = cat.description;
 
-        const catFavourite = document.createElement('p');
-        if (cat.favourite) {
-            catFavourite.textContent = '⭐ Избранный';
-            catFavourite.classList.add('favourite');
-        }
+    const content = document.createElement('div');
+    content.style.padding = '15px';
 
-        catCard.appendChild(catImage);
-        catCard.appendChild(catName);
-        catCard.appendChild(catAge);
-        catCard.appendChild(catRate);
-        catCard.appendChild(catDescription);
-        if (cat.favourite) {
-            catCard.appendChild(catFavourite);
-        }
+    const name = document.createElement('h2');
+    name.textContent = cat.name;
+    name.style.fontSize = '1.2rem';
+    name.style.marginTop = '0';
+    content.appendChild(name);
 
-        catsContainer.appendChild(catCard);
-    });
-}); 
+    const age = document.createElement('p');
+    age.textContent = `Возраст: ${cat.age} лет`;
+    content.appendChild(age);
+
+    const rate = document.createElement('p');
+    rate.textContent = `Рейтинг: ${cat.rate}/10`;
+    content.appendChild(rate);
+
+    const description = document.createElement('p');
+    description.textContent = cat.description;
+    description.style.fontSize = '0.9rem';
+    description.style.lineHeight = '1.4';
+    content.appendChild(description);
+
+    card.appendChild(content);
+    container.appendChild(card);
+});
+
+
+document.body.style.fontFamily = 'sans-serif';
+document.body.style.backgroundColor = '#f4f4f4';
+document.body.style.margin = '0';
+document.body.style.padding = '0';
 </script>
+</html>
+
